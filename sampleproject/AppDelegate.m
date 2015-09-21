@@ -13,6 +13,12 @@
 @end
 
 @implementation AppDelegate
+- (CMMotionManager *)motionManager
+{
+    if (!motionmanager) motionmanager = [[CMMotionManager alloc] init];
+    
+    return motionmanager;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
